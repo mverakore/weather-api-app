@@ -276,7 +276,7 @@
 
 .section {
   /* background-color: #EFF4FB; */
-  height: 500px;
+  height: 400px;
   width: 500px;
   border-radius: 25px;
   padding: 20px;
@@ -314,11 +314,28 @@
 }
 
 .bar {
-  display: flex;
   height: auto;
-  flex-direction: row;
   width: auto;
   padding: 10px;
-  background-color: aliceblue;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.71);
   border-radius: 15px;
+}
+
+.barCont {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  max-width: 430px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

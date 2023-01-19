@@ -1,2 +1,12 @@
 # Weather Web App
-description of the project, api used, tools 
+
+Enter a location from the world and see the weather forecast on current time. 
+
+# API 
+ OpenWeatherMap's current weather API
+
+# Tools 
+- OpenWeatherMap
+- Axios
+- Next.js
+

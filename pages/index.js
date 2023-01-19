@@ -58,22 +58,25 @@ export default function Home() {
           type="text" />
         {visible ? <div className={styles.section}>
           <h2 className={sora.className}>{data.name}</h2>
-          <img style={{ width: 150, height: 150 }} src={`https://openweathermap.org/img/wn/${icon}@2x.png`}></img>
-          <div style={{ fontSize: 75}} className={sora.className}>{data.main.temp}&deg;C</div>
+          <div style={{ fontSize: 65, display: 'flex', alignItems: 'center' }} className={sora.className}>
+            <img src={`https://openweathermap.org/img/wn/${icon}@2x.png`} />{data.main.temp}&deg;C
+          </div>
           {weather && weather.map((w, index) => {
             return (
-              <div key={index}>
-                <div className={sora.className}>{w.description}</div>
+              <div className={styles.content} key={index}>
                 <div className={sora.className}>{w.main}</div>
+                <div className={sora.className}>{w.description}</div>
               </div>
             )
           })
           }
-          <div className={styles.bar}>
-            <p className={sora.className}>Feels like {data.main.feels_like}&deg;C</p>
-          </div>
-          <div>
-            { data.wind.gust ? <div className={sora.className}>Wind gust: {data.wind.gust}m/s</div> : <div className={sora.className}>No current Wind Gust right now</div>}
+          <div className={styles.barCont}>
+            <div className={styles.bar}>
+              <p className={sora.className}>Feels like {data.main.feels_like}&deg;C</p>
+            </div>
+            <div className={styles.bar}>
+              {data.wind.gust ? <div className={sora.className}>Wind gust: {data.wind.gust}m/s</div> : <div className={sora.className}>No current Wind Gust right now</div>}
+            </div>
           </div>
         </div> : <></>}
       </main>
